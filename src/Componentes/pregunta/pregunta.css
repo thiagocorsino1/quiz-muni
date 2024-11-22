@@ -1,0 +1,171 @@
+html {
+  background: transparent;
+  height: 100vh;
+}
+
+.form-container {
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px; 
+  border-radius: 20px;
+  background-color: white;
+  min-height: 80vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  position: relative;
+}
+
+.scroll-active {
+  overflow-y: scroll;
+}
+
+.form-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.form-container::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+
+.volver {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+
+.color{
+  border: solid blue;
+}
+.header {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subheader {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.labelform {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.inputq {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-group input {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding-right: 20px; 
+}
+
+.button {
+  display: block;     
+  width: 100%;        
+  padding: 10px 20px;
+  margin: 10px auto;  
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.respuesta-container {
+  display: flex; 
+  align-items: center; 
+}
+
+.delete-button {
+  height: 20px;
+  width: 50px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
+  font-size: 12px; 
+}
+
+.editar {
+  position: fixed;
+  top: 125px;
+  left: 20px;
+}
+
+@media (min-width: 769px) {
+  .form-container {
+    padding-bottom: 20px;
+    min-height: auto;
+  }
+
+  form {
+    margin-bottom: 0;
+    padding-bottom: 0; 
+  }
+
+  .button:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*VISTA EN TELEFONOS */
+
+@media (max-width: 768px) {
+
+  .form-container {
+    width: 89%;
+    margin-top: calc(100vw - 81%);
+    padding: 20px;
+    padding-bottom: 10px;
+    overscroll-behavior: none;
+    overflow-y: auto;
+  }
+
+  form {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .button:last-child {
+    margin-bottom: 0;
+  }
+
+  .editar{
+    background-image: url('https://th.bing.com/th/id/OIP.Wwm15erRgJXzg3MzoFiAiQHaHa?rs=1&pid=ImgDetMain.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    font-size: 0px;
+    position: fixed;
+    top: 5px;
+    left: 83%;
+    cursor: pointer; 
+    z-index: 1000;
+    width: 12%; 
+    height: 45px; 
+  }
+}
+
